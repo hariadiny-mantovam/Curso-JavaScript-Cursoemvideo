@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        #botao{
+            padding: 10px;
+            background: rgb(197, 151, 151);
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header><h1>Desafio 2</h1></header>
+    <section>
+        <p><input id="botao" type="button" value="Start!" onclick="clique()"></p>
+    </section>
+
+    <script>
+        function clique (){
+            let nome = window.prompt('Qual é o seu nome?');
+            let idade = window.prompt(`Olá, ${nome}! Quantos anos você tem?`);
+            window.confirm(`Conheci uma pessoa que se chama ${nome} e tem ${idade} anos de idade!`);   
+        }           
+    </script>
+    
+</body>
+</html>

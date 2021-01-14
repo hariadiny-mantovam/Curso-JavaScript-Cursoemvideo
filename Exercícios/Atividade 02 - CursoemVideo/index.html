@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <section>
+        <!--Área do Formulário-->
+        <div>
+            <p>Informe o ano de seu nascimento: <input type="number" name="txtano" id="txtano" min="0"></p>
+
+            <p>Selecione seu sexo: 
+                <input type="radio" name="radsexo" id="masc" checked >
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsexo" id="fem"> 
+                <label for="fem">Feminino</label>
+            </p>
+            <p><input id="botao" type="button" value="Verificar" onclick="verificar()"></p>
+            
+
+        <!--Área da resposta gerada pelas informações do Formulário-->
+        <div id="res">
+            Preencha os dados corretamente para ver o resultado!
+        </div>
+    </section>
+
+    <footer><p>&copy; Exercício 2 do CursoemVídeo</p></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

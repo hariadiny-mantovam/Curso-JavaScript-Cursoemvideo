@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Ubuntu:wght@300&display=swap');
+
+body{
+    font: normal 15pt 'Arial';
+    text-align: center;
+    justify-content: center;
+    background: #ffffff;
+    overflow: auto;
+    
+}
+
+header{
+    color: #526d81;
+    font-family: 'Nunito';
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.281);
+}
+
+section{
+    font-family: 'Ubuntu';
+    background: #689494;
+    width: 550px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 12px #07070748;
+    color: #FFF;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+
+#botao{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #FFF; 
+    font: bold 12pt 'Ubuntu';  
+}
+
+#res{
+    padding: 5px;
+}
+
+footer{
+    font-style: italic;
+    font-size: 14px;
+}

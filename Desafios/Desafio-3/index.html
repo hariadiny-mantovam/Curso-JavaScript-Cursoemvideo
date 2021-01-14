@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            text-align: center;
+        }
+
+        section{
+            background: #8d8d8d;
+            padding: 10px;
+            width: 500px;
+        }
+    </style>
+    <title>Antecessor e Sucessor</title>
+</head>
+<body>
+    <h1>Qual número vem antes e depois?</h1>
+
+    <section>
+        <div>
+            <p>Digite um número qualquer:<input type="text" name="txnum" id="txnum"></p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        </div>
+        <div id="res"></div>
+    </section>
+
+    <script>
+        function verificar(){
+            let numero = Number(document.querySelector('input#txnum').value);
+            let res = document.querySelector('div#res');
+            let antes = numero - 1;
+            let depois = numero + 1;
+
+            res.innerHTML = `Antes de ${numero}, temos o número ${antes}. <br>`;
+            res.innerHTML += `Depois de ${numero}, temos o número ${depois}.`;
+            
+        }
+    </script>
+    
+</body>
+</html>
