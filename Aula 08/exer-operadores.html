@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: #5896;
+            color: #FFF;
+            text-align: center;
+            font: 32px Arial;
+        }
+    </style>
+    <title>olá</title>
+</head>
+<body>
+    <h1>Carona nós damos!</h1>
+
+    <script>
+        var nome = window.prompt("Olá, como você se chama?")
+        var idade = Number(window.prompt("Qual é a sua idade?"))
+        document.writeln(`Olá ${nome}, é um prazer ter você aqui conosco!<br>`)
+        document.writeln(` Você tem ${idade} anos!<br>`)
+        document.writeln(`${idade >=18 ? 'Andou bebendo muito e precisa de uma carona! Sem stress, nós cuidamos de você :D' : 'Você ainda não completou maior idade. Continue pegando carona com seus pais bebê!'}`)
+        
+        
+    </script>
+</body>
+</html>

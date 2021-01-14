@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font: normal 12pt Arial;
+            text-align: center;
+            justify-content: center;
+            background: #245b55;
+            color: #808080;
+            
+        }
+
+        input{
+            border: 2px solid #008080;
+            padding: 5px;
+        }
+
+        #res{
+            font-size: 15pt;
+            font: bold;
+            margin-top: 20px;
+            color: black;
+
+        }
+
+
+    </style>
+    <title>Seu signo</title>
+</head>
+<body>
+    <h1>Calculando dois números</h1>
+    <input type="number" name="txn1" id="txn1">
+    *
+    <input type="number" name="txn2" id="txn2">
+    <input type="button" value="Verificar" onclick="multiplica()">
+    <div id="res">Resultado</div>
+    <script>
+        function multiplica(){
+            var tn1 = window.document.querySelector('input#txn1')
+            var tn2 = window.document.querySelector('input#txn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 * n2
+            res.innerHTML = `O valor da multiplicação entre os números ${n1} e ${n2} é igual a ${s}.`
+        }
+    </script>
+</body>
+</html>

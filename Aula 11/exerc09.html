@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Informe de qual país você é:<input type="text" name="boxpais" id="boxpais">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="resposta"></div>
+
+    <script>
+        function verificar(){
+            let tboxpais = window.document.getElementById('boxpais')
+            let res = window.document.getElementById('resposta')
+            var pais = (boxpais.value)
+                if (pais == "Brasil"){
+                    res.innerText = "Você é brasileiro"
+                } else {
+                    res.innerText = "Você é estrangeiro"
+                }           
+
+            
+        }
+
+    </script>
+</body>
+</html>
