@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font: normal 15pt 'Arial';
+            text-align: center;
+        }
+
+        section{
+            margin: auto;
+            background: rgb(184, 42, 42);
+            border-radius: 5px;
+            color: #fff;
+            width: 600px;
+            padding: 15px;
+            box-shadow: 5px 5px 20px #000;
+        }
+
+        input{
+            line-height: 1.5em;
+            font: normal 12pt 'Arial';
+            border-radius: 5px;
+            background: #fff;
+            border: 2px solid #fff;
+        }
+
+        footer{
+            font-style: italic;
+        }
+
+    </style>
+    <title>Desafio 6
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de escalas termométricas!</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite uma temperatura em Celsius (°C) <input type="number" name="txtemp" id="txtemp"> <input type="button" value="Converter" onclick="converter()"></p>
+        </div>
+        <div id="res"></div>
+    </section>
+
+    <footer><p>&copy; Desafio 06 do CursoemVídeo</p></footer>
+    <script>
+        function converter(){
+            let celsius = Number(document.querySelector('input#txtemp').value);
+            let res = document.querySelector('div#res');
+            
+            res.innerHTML = `A temperatura de ${celsius} °C, corresponde a: <br>`;
+            let kelvin = celsius + 273;
+            res.innerHTML += `${kelvin} Kelvin (°K) <br>`;
+            let faren = (1.8*celsius) + 32;
+            res.innerHTML += `${faren} Farenheit (°F)`;
+        }
+
+    </script>
+</body>
+</html>
