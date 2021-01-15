@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+        text-align: center;
+        font: normal 15pt 'Arial';
+        }
+
+        h1{
+            color: #eccb0c;
+        }
+
+        section{
+            background: #a8d3ff;
+            width: 600px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        input{
+            border-radius: 5px;
+            border: 2px solid #fff;
+            line-height: 1.5em;
+        }
+    </style>
+    <title>Desafio 5</title>
+</head>
+<body>
+    <header><h1>Conversor de medidas</h1></header>
+    <section>
+        <div>
+            <p>Digite uma distância em metros:<input type="text" name="txmetros" id="txmetros"> <input type="button" value="Conferir" onclick="conferir()"></p>
+        </div>
+        <div id="res"></div>
+        
+    </section>
+    <script>
+        function conferir(){
+            let metros = Number(document.querySelector('input#txmetros').value);
+            let res = document.querySelector('div#res');
+            
+
+            //Quilômetro
+            let quilo = metros / (10*10*10);
+            quilo.toFixed(2);
+            res.innerHTML = `A conversão de metros para quilômetros é de ${quilo} (km)<br>`;
+            //Hectômetro
+            let hect = metros / (10*10);
+            hect.toFixed(2);
+            res.innerHTML += `A conversão de metros para hectômetros é de ${hect} (hm)<br>`;
+            //Decâmetro
+            let deca = metros / 10;
+            deca.toFixed(2);
+            res.innerHTML += `A conversão de metros para decâmetros é de ${deca}(dam)<br>`;
+            //Decímetro
+            let deci = metros * 10;
+            deci.toFixed(2);
+            res.innerHTML += `A conversão de metros para decímetros é de ${deci}(dm)<br>`;
+            //Centímetro
+            let cent = metros * (10*10);
+            cent.toFixed(2);
+            res.innerHTML += `A conversão de metros para centímetros é de ${cent}(cm)<br>`;
+            //Milímetro
+            let mili = metros * (10*10*10);
+            mili.toFixed(2);
+            res.innerHTML += `A conversão de metros para milímetros é de ${mili}(mm)<br>`;
+
+        }
+    </script>
+    
+</body>
+</html>
