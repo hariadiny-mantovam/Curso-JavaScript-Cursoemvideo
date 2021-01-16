@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        section{
+            background: #555f9c;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 3px 5px 15px #000;
+        }
+
+        input{
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid #555f9c;
+            line-height: 1.5em;
+        }
+
+        footer{
+            font-style: italic;
+        }
+    </style>
+    <title>Desafio 7</title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de moeda R$ &rarr; US$</h1>
+    </header>
+    <section>
+        <div>
+            <p>Quanto está a cotação do dólar hoje? <input type="number" name="txcot" id="txcot" placeholder="0,00"></p>
+            <p>Quantos reais você deseja converter? <input type="number" name="txreal" id="txreal" placeholder="0,00"></p>
+            <p><input type="button" value="Converter" onclick="converter()"></p>
+        </div>
+        <div id="res"></div>
+    </section>
+    <footer><p>&copy; Desafio 07 do CursoemVídeo</p></footer>
+    <script>
+        function converter(){
+            const txcot = document.querySelector('input#txcot');
+            const txreal = document.querySelector('input#txreal');
+            let res = document.querySelector('div#res');
+            res.innerHTML = '';
+
+            if(txcot.value.length == 0 || txreal.value.length == 0){
+                window.alert('Informe um valor válido!')
+            } else {
+                const cot = Number(txcot.value);
+                const reais = Number(txreal.value);
+                const dolar = (reais / cot);
+                res.innerHTML = `Você terá US$ ${dolar.toFixed(2).replace(".", ",")}.`
+            }
+
+
+
+            /*let cotacao = Number(document.querySelector('input#txcot').value);
+            let reais = Number(document.querySelector('input#txreal').value);
+            let res = document.querySelector('div#res');
+
+            cotacao.toFixed(2).replace(".", ",");
+            cotacao.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+
+            
+
+            res.innerHTML = `Reais ${reais} e cotacao ${cotacao}`;
+
+            if (cotacao == 0 || reais == 0){
+                window.alert('Informe um número válido')
+            } */
+
+        }
+    </script>
+    
+</body>
+</html>
