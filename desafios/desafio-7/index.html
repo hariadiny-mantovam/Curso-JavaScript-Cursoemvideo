@@ -12,9 +12,12 @@
         section{
             background: #555f9c;
             color: #fff;
+            margin: auto;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 3px 5px 15px #000;
+            width: 500px
+            
         }
 
         input{
@@ -38,7 +41,7 @@
         <div>
             <p>Quanto está a cotação do dólar hoje? <input type="number" name="txcot" id="txcot" placeholder="0,00"></p>
             <p>Quantos reais você deseja converter? <input type="number" name="txreal" id="txreal" placeholder="0,00"></p>
-            <p><input type="button" value="Converter" onclick="converter()"></p>
+            <p><input id="botao" type="button" value="Converter" onclick="converter()"></p>
         </div>
         <div id="res"></div>
     </section>
@@ -51,12 +54,12 @@
             res.innerHTML = '';
 
             if(txcot.value.length == 0 || txreal.value.length == 0){
-                window.alert('Informe um valor válido!')
+                window.alert('Informe um valor válido!');
             } else {
                 const cot = Number(txcot.value);
                 const reais = Number(txreal.value);
                 const dolar = (reais / cot);
-                res.innerHTML = `Você terá US$ ${dolar.toFixed(2).replace(".", ",")}.`
+                res.innerHTML = `Você terá US$ ${dolar.toFixed(2).replace(".", ",")}.`;
             }
 
 

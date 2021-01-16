@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 05</title>
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    <p>Adicione quantos números quiser entre 1 e 100 para descobrir suas propriedades.</p>
+    </header>
+    <section>
+        <div>
+            <p>Adicione um número <input type="number" name="txnum" id="txnum"> <input type="button" value="Adicionar" onclick="adicionarNumero()"></p>
+        </div>
+        <div>
+            <select name="snum" id="snum" size="10">
+                <option>Números adicionados:</option>
+            </select>
+            <p><input type="button" value="Finalizar" onclick="finalizar()"></p>
+            <p id="resf"></p>
+        </div>
+    </section>
+    <footer><p>&copy; Exerício 05 do CursoemVídeo</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
