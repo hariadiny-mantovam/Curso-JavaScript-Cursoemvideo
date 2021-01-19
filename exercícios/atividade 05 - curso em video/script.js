@@ -1,38 +1,67 @@
+let num = document.querySelector('input#txnum');
+let lista = document.querySelector('select#flista');
+let res = document.querySelector('div#res');
+let valores = [];
 
-
-function adicionarNumero(num){
-    //lógica
-    var num = [];
-    var tabela = document.querySelector('select#snum')
-    if (num <= 0 || num > 100){
-        window.alert('Digite um número válido!')
-    } else{
-        var selecao = document.createElement('option');
-        selecao.text = `Adicionado número ${num}`;
-        tabela.appendChild(selecao); 
-        resf.innerHTML = `${num}`
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true;
+    } else {
+        return false;
     }
 }
 
-adicionarNumero(Number(document.querySelector('input#txnum').value));
+function inList(n, l){
+     if(l.indexOf(Number(n)) != -1){
+         return true;
+     } else {
+         return false;
+     }
+}
 
+function adicionar(){
+    if (isNumero(num.value) && !inList(num.value, valores)){
+        valores.push(Number(num.value));
+        let item = document.createElement('option');
+        item.innerHTML = `Valor ${num.value} adicionado.`;
+        lista.appendChild(item);
+        res.innerHTML = ''
 
-
-
-/*function adicionar(num){
-    var num = Number(document.querySelector('input#txnum').value);
-    var tabela = document.querySelector('select#snum')
-    //let res = document.querySelector('option#res');
-    let resf = document.querySelector('p#resf');
-
-    if (num <= 0 || num > 100){
-        window.alert('Digite um número válido!')
-    } else{
-        let numselecionado = []
-        var selecao = document.createElement('option');
-        selecao.text = `Adicionado número ${num}`;
-        tabela.appendChild(selecao); 
-        resf.innerHTML = `${num}`
+    } else {
+        window.alert('Valor inválido ou já consta na lista!');
     }
-}*/
 
+    num.value = '';
+    num.focus();
+}
+
+function finalizar(){
+    if(valores.length == 0){
+        window.alert('Adicione os valores antes de finalizar!');
+    } else {
+        let total = valores.length;
+        let maior = valores[0];
+        let menor = valores [0];
+        let soma = 0;
+        let media = 0;
+        
+        for(let pos in valores){
+            if(valores[0] > maior);
+            maior = valores[pos];
+            if (valores [pos] < menor )
+            menor = valores[pos];
+            soma += valores[pos];
+        }
+        media = soma / total;
+
+        res.innerHTML = '';
+        res.innerHTML += `<p>Ao todo, temos ${total} números cadastrados</p>`;
+        res.innerHTML += `<p>O maior valor é ${maior}</p>`;
+        res.innerHTML += `<p>O menor valor é ${menor}</p>`;
+        res.innerHTML += `<p>A soma de todos os valores é ${soma}</p>`
+        res.innerHTML += `<p>A média dos valores é de ${media}</p>`
+        
+
+        
+    }
+}

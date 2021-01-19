@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    font: normal 15pt 'Arial';
+
+}
+
+section{
+    width: 500px;
+    background: #266e8f;
+    color: #fff;
+    margin: auto;
+    padding: 10px;
+}
+
+input{
+    font-size: 12pt;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    line-height: 2em;
+    text-align: center;
+
+}
+
+select{
+    font-size: 12pt;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: #a7cbd6;
+}
+
+footer{
+    font-size: 10pt;
+    font-style: italic;
+}
+

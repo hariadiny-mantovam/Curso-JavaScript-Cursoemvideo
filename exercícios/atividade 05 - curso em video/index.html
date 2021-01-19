@@ -9,21 +9,20 @@
 <body>
     <header>
         <h1>Analisador de números</h1>
-    <p>Adicione quantos números quiser entre 1 e 100 para descobrir suas propriedades.</p>
+    <p>Adicione quantos números quiser entre 1 e 100 para descobrir algumas propriedades.</p>
     </header>
     <section>
         <div>
-            <p>Adicione um número <input type="number" name="txnum" id="txnum"> <input type="button" value="Adicionar" onclick="adicionarNumero()"></p>
-        </div>
-        <div>
-            <select name="snum" id="snum" size="10">
+            <p>Adicione um número: <input type="number" name="txnum" id="txnum" placeholder="0"> <input type="button" value="Adicionar" onclick="adicionar()"></p>
+            <select name="flista" id="flista" size="6">
                 <option>Números adicionados:</option>
             </select>
             <p><input type="button" value="Finalizar" onclick="finalizar()"></p>
-            <p id="resf"></p>
+        </div>
+        <div id="res"> 
         </div>
     </section>
-    <footer><p>&copy; Exerício 05 do CursoemVídeo</p></footer>
+    <footer><p>&copy; Exercício 05 do CursoemVídeo</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
