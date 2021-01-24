@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    font: normal 15pt 'Nunito';
+    color: rgb(223, 93, 93);
+}
+
+body{
+    background: rgb(138, 163, 173);
+    text-align: center;
+}
+
+h1{
+    font: bold 25pt 'Nunito';
+}
+
+section{
+    border-radius: 5px;
+    margin: auto;
+    width: 600px;
+    padding: 15px;
+    background: #fff;
+}
+
+input{
+    width: 180px;
+    text-align: center;
+    border: 1px solid rgb(99, 97, 97);
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#botao{
+    color: #fff;
+    background: rgb(111, 133, 133);
+}
+
+#res{
+    margin-top: 5px;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    background: rgb(128, 97, 97);
+}
